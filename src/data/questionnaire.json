@@ -1,0 +1,211 @@
+{
+  "id": 708,
+  "code_questionnaire": "AUD_BIO_TEST",
+  "version_questionnaire": 1,
+  "date_questionnaire": "2022-01-20T08:12:22",
+  "profils": [
+    "ELEVEUR",
+    "AUDITEUR_OP",
+    "AUDITEUR_OC",
+    "AUDITEUR_ODG",
+    "AUDITEUR_INDEP"
+  ],
+  "titre_questionnaire": "AUDIT BIO SECURITE TEST",
+  "etat_questionnaire": "Publie",
+  "pages": [
+    {
+      "id_page": 1830,
+      "code_page": "1",
+      "titre_page": "SECTION 1 AUDIT BIO",
+      "description": "DESCRIPTION SECTION 1 AUBIT BIO",
+      "ordre_page": 1,
+      "questions": [
+        {
+          "id_question": 12137,
+          "code_question": "1-1",
+          "libelle_question": "QUESTION 1 SECTION 1 AUDIT BIO",
+          "format_question": "RADIO",
+          "obligatoire": 1,
+          "attribut": "{\"attributs\":{\"etiquettes\":[{\"texte\":\"QUESTION 1\",\"couleur\":\"#eee711\"}]}}",
+          "bulle_aide": "AIDE QUESTION 1 SECTION 1 AUDIT BIO",
+          "reponses": [
+            {
+              "id_reponse": 26818,
+              "libelle_reponse": "OUI",
+              "valeur": "1",
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": []
+            },
+            {
+              "id_reponse": 26819,
+              "libelle_reponse": "NON",
+              "valeur": "2",
+              "poids": 3,
+              "ordre_reponse": 2,
+              "attributs": ["Non conforme"]
+            }
+          ]
+        },
+        {
+          "id_question": 12138,
+          "code_question": "1-2",
+          "libelle_question": "Quels équipements de protection sont disponibles sur site ?",
+          "format_question": "CHECKBOX",
+          "obligatoire": 1,
+           "display": "[[{\"question\":\"12137\",\"reponse\":\"26818\"}]]",
+          "attribut": "{\"attributs\":{\"etiquettes\":[{\"texte\":\"EQUIPEMENTS\",\"couleur\":\"#4a90e2\"}],\"display\":\"[[{\\\"question\\\":\\\"12137\\\",\\\"reponse\\\":\\\"26818\\\"}]]\"}}",
+          "bulle_aide": "Sélectionnez tous les équipements disponibles",
+          "reponses": [
+            {
+              "id_reponse": 26820,
+              "libelle_reponse": "Gants de protection",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": []
+            },
+            {
+              "id_reponse": 26821,
+              "libelle_reponse": "Masques respiratoires",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 2,
+              "attributs": []
+            },
+            {
+              "id_reponse": 26822,
+              "libelle_reponse": "Lunettes de sécurité",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 3,
+              "attributs": []
+            },
+            {
+              "id_reponse": 26823,
+              "libelle_reponse": "Aucun équipement",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 4,
+              "attributs": ["Non conforme"]
+            }
+          ]
+        },
+        {
+          "id_question": 12139,
+          "code_question": "1-3",
+          "libelle_question": "À quelle heure commence la première rotation d'inspection ?",
+          "format_question": "TIME",
+          "obligatoire": 1,
+          "bulle_aide": "Format 24h",
+          "reponses": [
+            {
+              "id_reponse": 26824,
+              "libelle_reponse": null,
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": []
+            }
+          ]
+        },
+        {
+          "id_question": 12140,
+          "code_question": "1-4",
+          "libelle_question": "Décrivez les procédures d'urgence en place",
+          "format_question": "TEXT",
+          "obligatoire": 1,
+          "bulle_aide": "Détaillez les procédures d'urgence actuellement en place",
+          "reponses": [
+            {
+              "id_reponse": 26825,
+              "libelle_reponse": null,
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": []
+            }
+          ]
+        },
+        {
+          "id_question": 12141,
+          "code_question": "1-5",
+          "libelle_question": "Date de la dernière mise à jour du plan de biosécurité",
+          "format_question": "DATE",
+          "obligatoire": 1,
+          "bulle_aide": "Date de la dernière révision documentée",
+          "reponses": [
+            {
+              "id_reponse": 26826,
+              "libelle_reponse": null,
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id_page": 1831,
+      "code_page": "2",
+      "titre_page": "SECTION 2 AUDIT BIO SECU",
+      "description": "DESCRIPTION SECTION 2 AUDIT BIO SECU",
+      "ordre_page": 2,
+      "questions": [
+        {
+          "id_question": 12142,
+          "code_question": "2-1",
+          "libelle_question": "QUESTION 1 SECTION 2 AUDIT BIO",
+          "format_question": "CHECKBOX",
+          "obligatoire": 1,
+          "bulle_aide": "AIDE QUESTION 1 SECTION 2 AUDIT BIO",
+          "reponses": [
+            {
+              "id_reponse": 26827,
+              "libelle_reponse": "REPONSE 1 SECTION 2 QUESTION 1",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": ["Non conforme"]
+            },
+            {
+              "id_reponse": 26828,
+              "libelle_reponse": "REPONSE 2 SECTION 2 QUESTION 1",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 2,
+              "attributs": []
+            },
+            {
+              "id_reponse": 26829,
+              "libelle_reponse": "REPONSE 3 SECTION 2 QUESTION 1",
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 3,
+              "attributs": []
+            }
+          ]
+        },
+        {
+          "id_question": 12143,
+          "code_question": "2-2",
+          "libelle_question": "DATE QUESTION 2 SECTION 2",
+          "format_question": "DATE",
+          "obligatoire": 1,
+          "reponses": [
+            {
+              "id_reponse": 26830,
+              "libelle_reponse": null,
+              "valeur": null,
+              "poids": 0,
+              "ordre_reponse": 1,
+              "attributs": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

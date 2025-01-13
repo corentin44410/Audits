@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* Transitions pour les questions */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100%;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+/* Animations pour les options */
+.option-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.option-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.option-button:active {
+  transform: translateY(0);
+}
+
+/* Animation des boutons d'action */
+.nav-buttons {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav-buttons.transitioning {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Animation des boutons de commentaire et plan d'action */
+.action-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.action-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.action-button:hover::after {
+  left: 100%;
+}
+
+.action-button.has-content {
+  @apply bg-blue-50 border-blue-200 text-blue-600;
+}
+
+/* Animation d'apparition des modales */
+.modal-enter-active,
+.modal-leave-active {
+  transition: all 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+}
