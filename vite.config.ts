@@ -4,6 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: '/Audits/',  // Remplace par le nom de ton dépôt GitHub
+  build: {
+    outDir: 'dist'
+  },
   plugins: [
     vue(),
     VitePWA({
