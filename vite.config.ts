@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: '/vite-vue-typescript-starter/',  // Remplace par le nom de ton dépôt GitHub
+  base: '/Audits/',  // Remplace par le nom de ton dépôt GitHub
   plugins: [
     vue(),
     VitePWA({
