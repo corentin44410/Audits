@@ -6,18 +6,15 @@
       </router-link>
     </div>
 
-    <AuditSummary 
-      :responses="currentAudit?.responses || []" 
-      :audit-id="route.params.id as string"
-    />
+    <AuditSummary :responses="currentAudit?.responses || []" :audit-id="route.params.id" />
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
-import { useAuditStore } from '../stores/audit';
 import AuditSummary from '../components/AuditSummary.vue';
+import { useAuditStore } from '../stores/audit';
 
 const route = useRoute();
 const auditStore = useAuditStore();

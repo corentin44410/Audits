@@ -8,33 +8,29 @@
 
     <div class="bg-white rounded-lg shadow-lg p-6">
       <h2 class="text-2xl font-bold mb-6">Liste des non-conformités</h2>
-      
+
       <div v-if="nonConformities.length === 0" class="text-gray-500 text-center py-8">
         Aucune non-conformité détectée
       </div>
-      
+
       <div v-else class="space-y-6">
-        <div
-          v-for="nc in nonConformities"
-          :key="`${nc.pageId}-${nc.questionId}`"
-          class="border-b pb-6 last:border-b-0"
-        >
+        <div v-for="nc in nonConformities" :key="`${nc.pageId}-${nc.questionId}`" class="border-b pb-6 last:border-b-0">
           <h3 class="text-lg font-semibold mb-2">{{ nc.pageName }}</h3>
           <div class="bg-red-50 rounded-lg p-4">
             <p class="font-medium text-gray-800 mb-2">{{ nc.questionLabel }}</p>
             <p class="text-red-600 mb-4">Non-conformité détectée</p>
-            
+
             <div class="ml-4">
               <p class="text-gray-600 mb-2">
-                <span class="font-medium">Réponse :</span> 
+                <span class="font-medium">Réponse :</span>
                 {{ nc.responseLabel }}
               </p>
-              
+
               <div v-if="nc.comment" class="mb-2">
                 <p class="font-medium text-gray-700">Commentaire :</p>
                 <p class="text-gray-600">{{ nc.comment }}</p>
               </div>
-              
+
               <div v-if="nc.action?.label" class="mt-4">
                 <p class="font-medium text-gray-700">Plan d'action :</p>
                 <p class="text-gray-600">{{ nc.action.label }}</p>
@@ -50,13 +46,13 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { computed } from 'vue';
-import { useRoute } from 'vue-router';
-import { useAuditStore } from '../stores/audit';
-import questionnaire from '../data/questionnaire.json';
+<script setup>
 import { format } from 'date-fns';
 import { fr } from 'date-fns/locale';
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+import questionnaire from '../data/questionnaire.json';
+import { useAuditStore } from '../stores/audit';
 
 const route = useRoute();
 const auditStore = useAuditStore();
@@ -65,7 +61,7 @@ const currentAudit = computed(() => {
   return auditStore.audits.find(a => a.id === route.params.id);
 });
 
-const formatDate = (date: string) => {
+const formatDate = (date) => {
   return format(new Date(date), 'dd MMMM yyyy', { locale: fr });
 };
 

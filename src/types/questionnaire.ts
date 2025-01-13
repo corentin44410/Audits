@@ -26,7 +26,7 @@ export interface Question {
   obligatoire: number;
   bulle_aide?: string;
   reponses: Reponse[];
-  attribut?: string;
+  attribut: string;
 }
 
 export interface QuestionLabel {
